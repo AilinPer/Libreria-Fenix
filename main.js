@@ -116,6 +116,7 @@ while (otraCompra){
 }
 
 alert (`El total de todas las compras es: ${Total}`)
+    
 
                                                         //AVENTURAS
 
