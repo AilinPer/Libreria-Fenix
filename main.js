@@ -25,25 +25,25 @@ let Total = 0
 switch (eleccion){
     case 1:
         importeFantasia()
-        break;
+        break
     case 2:
         importeCienciaFiccion()
-        break;
+        break
     case 3:
         importeAventuras()
-        break;
+        break
     case 4:
         importeTerror()
-        break;
+        break
     case 5:
         importeRomance()
-        break;
+        break
     case 6:
         importeMitologia()
-        break;
+        break
     default:
         alert ("Opción no valida")
-        break;
+        break
 }
                                                         //FANTASIA
 function importeFantasia(){
@@ -148,24 +148,24 @@ function importeAventuras(){
 function importeTerror(){
     let otraCompra = true
     while (otraCompra) {
-        let terror = parseInt(("Los libros de terror y misterio qué manejamos son:\n 1. it - $372 \n 2. El resplandor - $668 \n 3. Drácula - $439 \n 4. El otro - $524 \n ¿Cuál libro deseas comprar?"))
-        let precio
-        switch(terror){
-            case 1:
-                precio = 372
-                break;
-            case 2:
-                precio = 668
-                break;
-            case 3: 
-                precio = 439
-                break;
-            case 4:
-                precio = 524
-                break;
-            default:
-                alert ("Opción no valida")
-        }
+    let terror = parseInt(prompt("Los libros de terror y misterio qué manejamos son:\n 1. it - $372 \n 2. El resplandor - $668 \n 3. Drácula - $439 \n 4. El otro - $524 \n ¿Cuál libro deseas comprar?"))
+    let precio
+    switch(terror){
+        case 1:
+            precio = 372
+            break;
+        case 2:
+            precio = 668
+            break;
+        case 3: 
+            precio = 439
+            break;
+        case 4:
+            precio = 524
+            break;
+        default:
+            alert ("Opción no valida")
+    }
 
         let cantidad = parseInt(prompt("Cúantos libros vas a llevar"))
         let TotalVenta = (cantidad * precio * IVA)
@@ -181,7 +181,7 @@ function importeTerror(){
 function importeRomance(){
     let otraCompra = true
     while (otraCompra) {
-        let romance = parseInt(("Los libros de romance qué manejamos son:\n 1. Orgullo y prejuicio - $243 \n 2. Cumbres borrascosas - $322 \n 3. Como agua para chocolate - $231 \n 4. El amor en los tiempos del cólera - $313"))
+        let romance = parseInt(prompt("Los libros de romance qué manejamos son:\n 1. Orgullo y prejuicio - $243 \n 2. Cumbres borrascosas - $322 \n 3. Como agua para chocolate - $231 \n 4. El amor en los tiempos del cólera - $313"))
         let precio
         switch(romance){
             case 1:
