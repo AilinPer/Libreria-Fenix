@@ -52,6 +52,10 @@ if (confirm == false){
             alert ("Opción no valida")
             break
     }
+
+    function calculoTotalVenta(cantidad, precio, IVA){
+        return cantidad * precio * IVA;
+    }
                                                             //FANTASIA
     function importeFantasia(){
         let otraCompra = true
@@ -118,7 +122,7 @@ if (confirm == false){
             }
 
             let cantidad = parseInt(prompt("Cúantos libros vas a llevar"))
-            let TotalVenta = (cantidad * precio * IVA)
+            let TotalVenta = calculoTotalVenta(cantidad, precio, IVA);
             alert (`El total a pagar del libro ${ciencia} es: ${TotalVenta} \n Gracias por tú compra`)
             otraCompra = confirm("¿Quiéres seguir comprando?")
             Total += TotalVenta
@@ -127,38 +131,6 @@ if (confirm == false){
     }
 
                                                             //AVENTURAS
-
-/*     function importeAventuras(){
-        let otraCompra = true
-        while (otraCompra) {
-            let aventura = parseInt(prompt("Los libros de aventuras qué manejamos son:\n 1. La isla del tesoro - $248 \n 2. Robinson Crusoe - $198 \n 3. La vuelta al mundo en 80 dias - $321 \n 4. Los tres mosqueteros - $364 \n ¿Cuál libro deseas comprar?"))
-            let precio
-            switch(aventura){
-                case 1:
-                    precio = 248
-                    break;
-                case 2:
-                    precio = 198
-                    break;
-                case 3: 
-                    precio = 321
-                    break;
-                case 4:
-                    precio = 364
-                    break;
-                default:
-                    alert ("Opción no valida")
-            }
-
-            let cantidad = parseInt(prompt("Cúantos libros vas a llevar"))
-            let TotalVenta = (cantidad * precio * IVA)
-            alert (`El total a pagar del libro ${aventura} es: ${TotalVenta} \n Gracias por tú compra`)
-            otraCompra = confirm("¿Quiéres seguir comprando?")
-            Total += TotalVenta
-        }
-        alert (`El total de todas las compras es: ${Total}`)
-    } */
-
     function importeAventuras(){
         const libros = [
             { titulo: "La isla del tesoro", precio: 248 },
@@ -176,20 +148,33 @@ if (confirm == false){
             for (let i = 0; i < libros.length; i++) {
                 mensaje += `${i+1}. ${libros[i].titulo} - $${libros[i].precio}\n`;
             }
-            let aventura = parseInt(prompt(mensaje + "¿Cuál libro deseas comprar?"));
-            // Obtener el precio del libro seleccionado
-            let precio = libros[aventura - 1].precio;
-            if (!precio) {
-                alert("Opción no válida");
-                continue; // Volver a preguntar
+            let aventura;
+            do{
+                aventura= parseInt(prompt(mensaje + "¿Cuál libro deseas comprar?"));
+                if (!/^\d+$/.test(aventura)){
+                    alert ("Opción invalida. Inserte un número")
+                }
+                else{
+                    if (aventura < 1 || aventura > libros.length){
+                        alert ("Opción invalida. Ingresar un número entre 1 y " + libros.length);
+                    }
+                }
             }
+            while (!/^\d+$/.test(aventura) || aventura < 1 || aventura > libros.length);
+
+                // Obtener el precio del libro seleccionado
+                let precio = libros[aventura - 1].precio;
+                if (!precio) {
+                    alert("Opción no válida");
+                    continue; // Volver a preguntar
+                }
 
             let cantidad = parseInt(prompt("¿Cuántos libros vas a llevar?"));
-            let TotalVenta = cantidad * precio * IVA;
+            let TotalVenta = calculoTotalVenta(cantidad, precio, IVA);
                 alert(`El total a pagar del libro ${aventura} es: ${TotalVenta} \n Gracias por tu compra`);
             otraCompra = confirm("¿Quieres seguir comprando?");
             Total += TotalVenta;
-            }
+        }
             alert(`El total de todas las compras es: ${Total}`);
     }   
 
