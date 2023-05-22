@@ -50,7 +50,7 @@ body{
     object-fit: contain;
 }
 .boton{
-    background-color: #DE1B7F; 
+    background-color: #d13184cc; 
     font-family:'Times New Roman', Times, serif;
     border: none; 
     color: white; 
@@ -121,3 +121,68 @@ h3{
     background-color: #95D0F7;
     
 }
+.label{
+    font-size: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    padding: 2%;
+    margin: 2% 4%;
+}
+.filtrado{
+    background-color: #cdedfd;
+    border: black;
+    padding: 10px;
+    /* spacing */
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: 2.5px solid black;
+}
+
+th, td {
+    padding: 20px;
+    border:1px solid black;
+}
+.contenedor-carrito {
+    display: table;
+    width: 100%;
+    justify-content: center;
+}
+
+.contenedor-producto {
+    display: table;
+    justify-content: center;
+}
+
+.contenedor-producto > * {
+    display: table-cell;
+    margin: 10px;
+}
+.contenedor-finalizar{
+    font-weight: bold;
+    margin-top: 5%;
+    margin-left: 45%;
+    margin-bottom: 5%;
+}
+.imagen-producto {
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+    margin-right: 10px;
+}
+
+.boton:hover {
+    background-color: #cf6cf7;
+}
+
+p {
+    margin: 0;
+}
+
+.total-pagar {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+

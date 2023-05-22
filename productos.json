@@ -20,7 +20,7 @@
         "nombre":"Dune",
         "precio": 449,
         "img":"img/img3.jpg",
-        "categoria":"CienciaFiccion"
+        "categoria":"ciencia ficcion"
     },
 
     {
@@ -28,7 +28,7 @@
         "nombre":"Un mundo feliz",
         "precio": 269,
         "img":"img/img4.webp",
-        "categoria":"CienciaFiccion"
+        "categoria":"ciencia ficcion"
     },
 
     {
@@ -36,7 +36,7 @@
         "nombre":"La isla del Tesoro",
         "precio": 248,
         "img":"img/img5.jpg",
-        "categoria":"Aventura"
+        "categoria":"aventura"
     },
 
     {
@@ -44,7 +44,7 @@
         "nombre":"Robinson Crusoe",
         "precio": 198,
         "img":"img/img6.jpg",
-        "categoria":"Aventura"
+        "categoria":"aventura"
     },
 
     {
@@ -68,7 +68,7 @@
         "nombre":"Orgullo y Prejuicio",
         "precio": 243,
         "img":"img/img9.gif",
-        "categoria":"Romance"
+        "categoria":"romance"
     },
 
     {
@@ -76,7 +76,7 @@
         "nombre":"Cumbres borrascosas",
         "precio": 322,
         "img":"img/img10.jpg",
-        "categoria":"Romance"
+        "categoria":"romance"
     },
 
     {
